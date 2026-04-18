@@ -23,6 +23,12 @@ export type Category = {
   updatedAt: string;
 };
 
+export type NewNoteData = {
+  title: string;
+  content: string;
+  categoryId: string;
+};
+
 axios.defaults.baseURL = "https://next-v1-notes-api.goit.study";
 
 // const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -42,5 +48,10 @@ export const getSingleNote = async (id: string) => {
 
 export const getCategories = async () => {
   const res = await axios.get<Category[]>("/categories");
+  return res.data;
+};
+
+export const createNote = async (data: NewNoteData) => {
+  const res = await axios.post<Note>("/notes", data);
   return res.data;
 };

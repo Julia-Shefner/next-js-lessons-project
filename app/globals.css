@@ -24,7 +24,7 @@ body {
 
 /* ===== Base styles ===== */
 body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;

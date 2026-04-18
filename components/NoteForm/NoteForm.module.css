@@ -1,0 +1,118 @@
+/* NoteForm.module.css */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 560px;
+  width: 100%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.submitBtn {
+  flex: 1;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #111827;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.submitBtn:hover {
+  background-color: #1f2937;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: scale(0.97);
+}
+
+.cancelBtn {
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.cancelBtn:active {
+  transform: scale(0.97);
+}
